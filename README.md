@@ -25,6 +25,8 @@ go run tutorial.go
 =>>> Hello world!
 ```
 
+---
+
 ## 2. Variables and Data Types
 
 - Go is a staticly typed language and because of that, along with the declaration of each variable one should also declare it's type. Something like:
@@ -84,6 +86,8 @@ go run tutorial.go
 =>>> Hello world! homayoon 98 23 12 4.5 false 28
 ```
 
+---
+
 ## 3. Implicit and Explicit definition. Default values and types
 
 - You can define a variable in different ways, some of them are called `implicit` and others are `explicit`, which in the essence means if you are specifying the variable type yourself or not.
@@ -107,3 +111,14 @@ var my_bool bool // defaults to false
 ```
 
 - You can not `declare a variable twice` AT LEAST IN A SINGLE FUNCTION!
+- You can print `type of a variable` by using `fmt.Printf("%T", your_var)`.
+
+```go
+var name string = "homayoon"
+var age int16 = 23
+fmt.Println(name, age)
+fmt.Prinf("%T", name) // string
+fmt.Print("%T", age) // int16
+```
+
+---
