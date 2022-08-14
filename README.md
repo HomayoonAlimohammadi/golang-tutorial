@@ -83,3 +83,27 @@ func main() {
 go run tutorial.go
 =>>> Hello world! homayoon 98 23 12 4.5 false 28
 ```
+
+## 3. Implicit and Explicit definition. Default values and types
+
+- You can define a variable in different ways, some of them are called `implicit` and others are `explicit`, which in the essence means if you are specifying the variable type yourself or not.
+
+```go
+var name string = "homayoon" // explicit
+var name = "homayoon" // implicit
+var age = 12 // implicit, might be an specific type of int or unit
+// that you actually don't want.
+name := "homayon" // still implicit
+```
+
+- the `:=` is called `Assignment Expression` or `Walrus operator` and does the exact same thing as the line above it.
+- the `implicit` type of variable declaration forces Go itself to determine a type for your variable. THIS MIGHT BE PROBLEMATIC IN SOME CASES.
+- the Walrus operator can only be used `inside of a function`. because outside a function, every line has to be started with a keyword like `func` or `var`.
+- variables doesn't have to be given a value right at the beginning. you can assign them a suitable value later, but until then they are going to hold a `default value`.
+
+```go
+var name int // default to 0
+var my_bool bool // defaults to false
+```
+
+- You can not `declare a variable twice` AT LEAST IN A SINGLE FUNCTION!
