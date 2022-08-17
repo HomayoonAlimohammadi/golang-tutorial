@@ -122,3 +122,44 @@ fmt.Print("%T", age) // int16
 ```
 
 ---
+
+## 4. there are 3 types of `scoping` for variables:
+
+- Exported (`uppercase first letter in the package scope`)
+- Packge Scope
+- Block Scope
+
+```go
+package main
+
+var Variable string = "global scope (exported)"
+var variable string = "package scope"
+
+func main() {
+	var variable string = "block scope" // this is also called shadowing
+	// because it's redefining the variable available outside.
+}
+```
+
+There is casting available in this language:
+
+```go
+func main() {
+	i := 50
+	var j float32
+	j = float32(i)
+}
+```
+
+- keep in mind that casting or converting an integer to a string actually returns the equivalent utf-8 character of that integer's `ASCII` number.
+- if you want to convert an integer to an actual string with the same appearance (!) do this:
+
+```go
+import "strconv"
+
+func main() {
+	i := 140
+	j := strconv.Itoa(i) // string of 140
+	k := string(i) // some utf-8 character
+}
+```
