@@ -2,15 +2,14 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 var i int = 12
 
 func main() {
-	i := 120
-	j := strconv.Itoa(i)
-	k := string(i)
-	fmt.Println(j)
-	fmt.Println(k)
+	a := []int{1, 2, 3}
+	b := a[:]
+	b[1] = 10
+	fmt.Println(a)
+	fmt.Println(b)
 }

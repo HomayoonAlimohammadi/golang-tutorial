@@ -141,7 +141,7 @@ func main() {
 }
 ```
 
-There is casting available in this language:
+There is `casting` available in this language:
 
 ```go
 func main() {
@@ -162,4 +162,37 @@ func main() {
 	j := strconv.Itoa(i) // string of 140
 	k := string(i) // some utf-8 character
 }
+```
+
+---
+
+## 5. Naming convensions and Primitives
+
+- for `Exported` variables or `consts` --> `PascalCase`
+- for normal variables or `consts--> `camelCase`
+- in this language we have all types of different operations
+
+```go
+a := 5
+b := 6
+a + b
+a - b
+a * b
+a / b // returns an int (not accurate)
+a % b
+// bitwise operations:
+a & b
+a | b
+a ^ b // XOR
+a &^ b // and not, means True if both are false
+a >> 5 // shifting 5 bits to right, in math is: a / 2^5
+a << 2 // shifting 5 bits to left, in math is: a * 2^5
+```
+
+- These operations can only be done between two values of `Exactly same type (int16)`.
+- This means a float cannot be added to an integer, neither int16 to int32
+- `Casting` is handled like python.
+
+```
+a + int(b)
 ```
